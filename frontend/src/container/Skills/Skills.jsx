@@ -24,56 +24,60 @@ const Skills = () => {
     });
   }, []);
 
+  console.log(experience);
+
   return (
     <>
-      <h2 className="head-text">Skills & Experience</h2>
+      <h2 className='head-text'>Skills & Experience</h2>
 
-      <div className="app__skills-container">
-        <motion.div className="app__skills-list">
+      <div className='app__skills-container'>
+        <motion.div className='app__skills-list'>
           {skills?.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
-              className="app__skills-item app__flex"
+              className='app__skills-item app__flex'
               key={skill.name}
             >
               <div
-                className="app__flex"
+                className='app__flex'
                 style={{ backgroundColor: skill.bgColor }}
               >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-              <p className="p-text">{skill.name}</p>
+              <p className='p-text'>{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
 
-        <motion.div className="app__skills-exp">
+        <motion.div className='app__skills-exp'>
           {experience?.map((exp) => (
-            <motion.div className="app__skills-exp-item" key={exp.year}>
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{exp.year}</p>
+            <motion.div className='app__skills-exp-item' key={exp.year}>
+              <div className='app__skills-exp-year'>
+                <motion.div style={{ maxWidth: "25px" }}>
+                  <p className='bold-text'>{exp.year}</p>
+                </motion.div>
               </div>
 
-              <motion.div className="app__skills-exp-works">
+              <motion.div className='app__skills-exp-works'>
                 {exp.works.map((work) => (
                   <>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
-                      className="app__skills-exp-work"
+                      className='app__skills-exp-work'
                       data-tip
                       data-for={work.name}
                       key={work.name}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text">{work.company}</p>
+                      <h4 className='bold-text'>{work.name}</h4>
+                      <p className='p-text'>{work.company}</p>
 
                       <ReactTooltip
                         id={work.name}
-                        effect="solid"
-                        arrowColor="#fff"
-                        className="skills-tooltip"
+                        effect='solid'
+                        arrowColor='#fff'
+                        className='skills-tooltip'
                       >
                         {work.desc}
                       </ReactTooltip>

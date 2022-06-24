@@ -42,6 +42,7 @@
 
 .app__work-portfolio {
   display: flex;
+  // flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -130,6 +131,7 @@
 
 .app__work-content {
   padding: 0.5rem;
+  min-height: 100px;
   width: 100%;
   position: relative;
   flex-direction: column;
@@ -137,6 +139,10 @@
   h4 {
     margin-top: 1rem;
     line-height: 1.5;
+  }
+
+  p {
+    text-align: center;
   }
 
   .app__work-tag {
@@ -147,4 +153,91 @@
     background-color: #fff;
     top: -25px;
   }
+}
+
+.app__testimonial-btns {
+  flex-direction: row;
+  margin-top: 1rem;
+
+  div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: var(--secondary-color);
+    }
+
+    &:hover {
+      background-color: var(--secondary-color);
+
+      svg {
+        color: var(--white-color);
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 100px;
+      height: 100px;
+
+      svg {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}
+
+.app__work-bg {
+  // background-color: red;
+  max-height: 900px;
+  overflow: scroll;
+  overflow-x: hidden;
+  backdrop-filter: blur(4px);
+  padding-left: 7px;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* background of the scrollbar except button or resizer */
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  /* scrollbar itself */
+  &::-webkit-scrollbar-thumb {
+    background-color: #656565;
+    border-radius: 16px;
+  }
+
+  /* set button(top and bottom of the scrollbar) */
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+.app__work-bg-main {
+  border-radius: 15px;
+  padding: 20px;
+
+  background-color: hsla(232, 100%, 72%, 1);
+  background-image: radial-gradient(
+      at 39% 83%,
+      hsla(230, 93%, 64%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 64% 28%, hsla(14, 62%, 43%, 1) 0px, transparent 50%),
+    radial-gradient(at 36% 46%, hsla(285, 76%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 12% 78%, hsla(318, 69%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 81% 10%, hsla(57, 73%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 86% 49%, hsla(265, 92%, 66%, 1) 0px, transparent 50%),
+    radial-gradient(at 69% 14%, hsla(335, 74%, 70%, 1) 0px, transparent 50%);
 }

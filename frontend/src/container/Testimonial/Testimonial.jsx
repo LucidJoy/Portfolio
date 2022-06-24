@@ -35,21 +35,21 @@ const Testimonial = () => {
     <>
       {testimonials.length && (
         <>
-          <div className="app__testimonial-item app__flex">
-            <img src={urlFor(test.imgurl)} alt="testimonial" />
+          <div className='app__testimonial-item app__flex'>
+            <img src={urlFor(test.imgurl)} alt='testimonial' />
 
-            <div className="app__testimonial-content">
-              <p className="p-text">{test.feedback}</p>
+            <div className='app__testimonial-content'>
+              <p className='p-text'>{test.feedback}</p>
               <div>
-                <h4 className="bold-text">{test.name}</h4>
-                <h5 className="p-text">{test.company}</h5>
+                <h4 className='bold-text'>{test.name}</h4>
+                <h5 className='p-text'>{test.company}</h5>
               </div>
             </div>
           </div>
 
-          <div className="app__testimonial-btns app__flex">
+          <div className='app__testimonial-btns app__flex'>
             <div
-              className="app__flex"
+              className='app__flex'
               onClick={() =>
                 handleClick(
                   currentIndex === 0
@@ -62,7 +62,7 @@ const Testimonial = () => {
             </div>
 
             <div
-              className="app__flex"
+              className='app__flex'
               onClick={() =>
                 handleClick(
                   currentIndex === testimonials.length - 1
@@ -77,7 +77,7 @@ const Testimonial = () => {
         </>
       )}
 
-      <div className="app__testimonials-brands app__flex">
+      <div className='app__testimonials-brands app__flex'>
         {brands.map((brand) => (
           <motion.div
             whileInView={{ opacity: [0, 1] }}
