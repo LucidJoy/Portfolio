@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+// import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -61,9 +61,16 @@ const Work = () => {
       <motion.div className='app__work-bg-main'>
         <motion.div className='app__work-bg'>
           <motion.div
-            animate={animateCard}
-            transition={{ duration: 0.5, delayChildren: 0.5 }}
+            // animate={animateCard}
+            // transition={{ duration: 0.5, delayChildren: 0.5 }}
             className='app__work-portfolio'
+            animate={animateCard}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              duration: 0.5,
+              delayChildren: 0.5,
+            }}
           >
             {filterWork.map((work, index) => (
               <div className='app__work-item app__flex' key={index}>

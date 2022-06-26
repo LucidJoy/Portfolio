@@ -30,7 +30,7 @@ const Header = () => {
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className='p-text'>Hello, I am</p>
-              <h1 className='head-text'>LucidJoy</h1>
+              <h1 className='head-text'>Jyotirmoy</h1>
             </div>
           </div>
 
@@ -61,11 +61,13 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className='app__header-circles'
       >
-        {[images.html, images.reactjs, images.sass].map((circle, index) => (
-          <div className='circle-cmp app__flex' key={`circle-${index}`}>
-            <img src={circle} alt='circle' />
-          </div>
-        ))}
+        {[images.solidity, images.reactjs, images.mongodb].map(
+          (circle, index) => (
+            <div className='circle-cmp app__flex' key={`circle-${index}`}>
+              <img src={circle} alt='circle' />
+            </div>
+          )
+        )}
       </motion.div>
     </div>
   );

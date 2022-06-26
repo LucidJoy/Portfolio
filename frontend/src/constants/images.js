@@ -36,6 +36,9 @@ import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 
+import solidity from "../assets/solidity.svg";
+import mongodb from "../assets/mongodb-icon-1.svg";
+
 export default {
   email,
   mobile,
@@ -71,4 +74,6 @@ export default {
   skype,
   spotify,
   reactjs,
+  solidity,
+  mongodb,
 };
