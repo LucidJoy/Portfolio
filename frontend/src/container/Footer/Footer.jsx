@@ -49,15 +49,15 @@ const Footer = () => {
       <div className='app__footer-cards'>
         <div className='app__footer-card'>
           <img src={images.email} alt='email' />
-          <a href='mailto: hello@micael.com' className='p-text'>
+          <a href='mailto: jyotirmoykarmakar02@gmail.com' className='p-text'>
             jyotirmoykarmakar02@gmail.com
           </a>
         </div>
 
         <div className='app__footer-card'>
           <img src={images.mobile} alt='phone' />
-          <a href='tel: +1 (123) 456-789' className='p-text'>
-            +918876764474
+          <a href='tel: +918876764474' className='p-text'>
+            +91 8876764474
           </a>
         </div>
       </div>

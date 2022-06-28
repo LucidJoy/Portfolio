@@ -38,6 +38,9 @@ import spotify from "../assets/spotify.png";
 
 import solidity from "../assets/solidity.svg";
 import mongodb from "../assets/mongodb-icon-1.svg";
+import logoPort from "../assets/logo-port.png";
+import memoji from "../assets/joyImg.png";
+import memojiLaptop from "../assets/ImageLaptop.png";
 
 export default {
   email,
@@ -76,4 +79,7 @@ export default {
   reactjs,
   solidity,
   mongodb,
+  logoPort,
+  memoji,
+  memojiLaptop,
 };
